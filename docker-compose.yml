@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  base:
+    image: liofal/base:latest
+    build: .
+    env_file: 
+        - .env
+    hostname: liofal.synology.me
+    volumes:
+      - .:/work
+    logging:
+      driver: json-file
+  
